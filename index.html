@@ -3,161 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page - 3D House Generator</title>
+  <title>Haji Asghar Construction & Services</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <!-- Header Section -->
   <header>
-    <div class="logo">
-      <div id="3d-logo"></div> <!-- Placeholder for 3D Animated Logo -->
-    </div>
+    <div class="logo">Haji Asghar CMS</div>
     <nav>
       <ul>
-        <li><a href="#">3D House Generator</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">3D Model Generator</a></li>
         <li><a href="#">Shopping</a></li>
         <li><a href="#">Services</a></li>
-        <li><a href="#">Partner System</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Background Slideshow -->
+  <!-- Slideshow Section -->
   <section class="slideshow">
     <div class="slides">
-      <img src="house1.jpg" alt="AI-Generated House Design 1">
-      <img src="house2.jpg" alt="AI-Generated House Design 2">
-      <img src="house3.jpg" alt="AI-Generated House Design 3">
+      <img src="images/house1.jpg" alt="Modern House">
+      <img src="images/house2.jpg" alt="Luxury Villa">
+      <img src="images/house3.jpg" alt="Classic House">
     </div>
   </section>
 
-  <!-- AI Chat Assistant -->
-  <div class="chat-assistant">
-    <button id="chat-button">Chat with AI</button>
-    <div id="chat-box" class="hidden">
-      <div id="chat-messages"></div>
-      <input type="text" id="chat-input" placeholder="Ask a question...">
-    </div>
-  </div>
+  <!-- 3D Model Generator -->
+  <section class="house-generator">
+    <h2>AI-Powered 3D House Generator</h2>
+    <form id="house-form">
+      <label>Plot Area (Length × Width in Feet)</label>
+      <input type="number" placeholder="Length" id="length">
+      <input type="number" placeholder="Width" id="width">
+      <p>Total Area: <span id="total-area">0</span> Sq. Ft.</p>
 
-  <!-- Social Media Links & Contact Information -->
+      <label>Number of Rooms</label>
+      <select id="rooms">
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+      </select>
+
+      <label>Budget Range</label>
+      <select id="budget">
+        <option>Low</option><option>Medium</option><option>High</option>
+      </select>
+
+      <button type="submit">Generate 3D Model</button>
+    </form>
+    <div id="model-placeholder"></div>
+  </section>
+
+  <!-- Shopping Section -->
+  <section class="shopping">
+    <h2>Construction Material Shopping</h2>
+    <div class="trades">
+      <button>Gray Structure</button>
+      <button>Sewerage</button>
+      <button>Plumbing</button>
+      <button>Paint</button>
+      <button>Finishing</button>
+    </div>
+    <div class="product-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cement</td>
+            <td>$10</td>
+            <td><button>Add to Cart</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Construction Services</h2>
+    <div class="service-categories">
+      <button>Construction</button>
+      <button>Plumbing</button>
+      <button>Electrical</button>
+      <button>Painting</button>
+    </div>
+    <div class="service-details">
+      <h3>Service Name</h3>
+      <p>Description of the service.</p>
+      <button>Book Now</button>
+    </div>
+  </section>
+
+  <!-- Partner Registration -->
+  <section class="partner-registration">
+    <h2>Become a Partner</h2>
+    <form id="partner-form">
+      <label>Category</label>
+      <select>
+        <option>Material Producer</option>
+        <option>Material Seller</option>
+        <option>Service Provider</option>
+      </select>
+      <input type="text" placeholder="Full Name">
+      <input type="email" placeholder="Email">
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <div class="social-media">
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-      <a href="#">YouTube</a>
-    </div>
-    <div class="contact-info">
-      <p>Email: info@3dhousegenerator.com</p>
-      <p>Phone: +123 456 7890</p>
-    </div>
+    <p>© 2025 Haji Asghar Construction & Services</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-<section class="house-generator">
-  <h2>3D House Generator</h2>
-  <form id="house-form">
-    <label for="plot-area">Plot Area (Sq. Ft.)</label>
-    <input type="number" id="plot-area" placeholder="Enter plot area">
-
-    <label for="rooms">Number of Rooms</label>
-    <select id="rooms">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-
-    <label for="budget">Budget Range</label>
-    <select id="budget">
-      <option value="low">Low</option>
-      <option value="medium">Medium</option>
-      <option value="high">High</option>
-    </select>
-
-    <button type="submit">Generate 3D Model</button>
-  </form>
-  <div id="model-placeholder">
-    <!-- Placeholder for 3D Model -->
-  </div>
-</section>
-<section class="shopping">
-  <h2>Construction Material Shopping</h2>
-  <div class="trades">
-    <button>Gray Structure</button>
-    <button>Sewerage</button>
-    <button>Plumbing</button>
-    <button>Paint</button>
-    <button>Finishing</button>
-  </div>
-  <div class="product-table">
-    <table>
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Cement</td>
-          <td>$10</td>
-          <td><button>Add to Cart</button></td>
-        </tr>
-        <!-- Add more rows dynamically -->
-      </tbody>
-    </table>
-  </div>
-</section>
-<section class="services">
-  <h2>Construction Services</h2>
-  <div class="service-categories">
-    <button>Construction</button>
-    <button>Plumbing</button>
-    <button>Electrical</button>
-    <button>Painting</button>
-  </div>
-  <div class="service-details">
-    <h3>Service Name</h3>
-    <p>Description of the service.</p>
-    <button>Book Now</button>
-  </div>
-</section>
-<section class="partner-registration">
-  <h2>Become a Partner</h2>
-  <form id="partner-form">
-    <label for="category">Category</label>
-    <select id="category">
-      <option value="producer">Material Producer</option>
-      <option value="seller">Material Seller</option>
-      <option value="provider">Service Provider</option>
-    </select>
-
-    <label for="name">Full Name</label>
-    <input type="text" id="name" placeholder="Enter your name">
-
-    <label for="email">Email</label>
-    <input type="email" id="email" placeholder="Enter your email">
-
-    <button type="submit">Submit</button>
-  </form>
-</section>
-<section class="contact">
-  <h2>Contact Us</h2>
-  <form id="contact-form">
-    <label for="name">Name</label>
-    <input type="text" id="name" placeholder="Enter your name">
-
-    <label for="email">Email</label>
-    <input type="email" id="email" placeholder="Enter your email">
-
-    <label for="message">Message</label>
-    <textarea id="message" placeholder="Enter your message"></textarea>
-
-    <button type="submit">Send</button>
-  </form>
-</section>
