@@ -1,17 +1,23 @@
-document.getElementById("house-form").addEventListener("input", function () {
-  let length = document.getElementById("length").value;
-  let width = document.getElementById("width").value;
-  let area = length * width || 0;
-  document.getElementById("total-area").textContent = area;
-});
-
-// Auto-slide for images
-const slides = document.querySelector(".slides");
-let index = 0;
-
-function nextSlide() {
-  index = (index + 1) % 3;
-  slides.style.transform = `translateX(-${index * 100}%)`;
+function showForm() {
+    let form = document.getElementById("partnerForm");
+    form.classList.remove("hidden");
 }
 
-setInterval(nextSlide, 5000);
+function generate3DModel() {
+    alert("3D Model Generator Coming Soon!");
+}
+
+// Shopping Cart Logic
+let cart = [];
+
+function addToCart(itemName, itemPrice) {
+    cart.push({ name: itemName, price: itemPrice });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(itemName + " added to cart!");
+}
+
+// Form Submission Handling
+document.getElementById("partnerForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    alert("Thank you! Your request has been submitted.");
+});
