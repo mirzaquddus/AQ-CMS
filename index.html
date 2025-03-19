@@ -1,139 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Haji Asghar Construction & Services</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haji Asghar Construction</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header>
-    <div class="logo">Haji Asghar CMS</div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">3D Model Generator</a></li>
-        <li><a href="#">Shopping</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Partners</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <h1>Haji Asghar Construction</h1>
+        <nav>
+            <ul>
+                <li><a href="#shopping">Shopping</a></li>
+                <li><a href="#model">3D Model</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#partner">Become a Partner</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Slideshow Section -->
-  <section class="slideshow">
-    <div class="slides">
-      <img src="images/house1.jpg" alt="Modern House">
-      <img src="images/house2.jpg" alt="Luxury Villa">
-      <img src="images/house3.jpg" alt="Classic House">
-    </div>
-  </section>
+    <section id="shopping" class="section-style">
+        <h2>Shopping</h2>
+        <p>Buy high-quality construction materials.</p>
+        <div class="card-container">
+            <div class="card">
+                <img src="cement.jpg" alt="Cement">
+                <h3>Cement</h3>
+                <p>Price: Rs. 1200 per bag</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="steel.jpg" alt="Steel">
+                <h3>Steel</h3>
+                <p>Price: Rs. 150,000 per ton</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
 
-  <!-- 3D Model Generator -->
-  <section class="house-generator">
-    <h2>AI-Powered 3D House Generator</h2>
-    <form id="house-form">
-      <label>Plot Area (Length × Width in Feet)</label>
-      <input type="number" placeholder="Length" id="length">
-      <input type="number" placeholder="Width" id="width">
-      <p>Total Area: <span id="total-area">0</span> Sq. Ft.</p>
+    <section id="model" class="section-style">
+        <h2>3D Model</h2>
+        <p>Design your dream home with our AI-based tool.</p>
+        <button onclick="generate3DModel()">Start Designing</button>
+    </section>
 
-      <label>Number of Rooms</label>
-      <select id="rooms">
-        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-      </select>
+    <section id="services" class="section-style">
+        <h2>Our Services</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="construction.jpg" alt="Construction">
+                <h3>Construction</h3>
+                <p>Complete house construction services.</p>
+                <button>Book Now</button>
+            </div>
+            <div class="card">
+                <img src="plumbing.jpg" alt="Plumbing">
+                <h3>Plumbing</h3>
+                <p>High-quality plumbing services.</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </section>
 
-      <label>Budget Range</label>
-      <select id="budget">
-        <option>Low</option><option>Medium</option><option>High</option>
-      </select>
+    <section id="partner" class="section-style">
+        <h2>Become a Partner</h2>
+        <p>Register as a material producer, seller, or service provider.</p>
+        <label for="partnerType">Choose Category:</label>
+        <select id="partnerType" onchange="showForm()">
+            <option value="">-- Select --</option>
+            <option value="materialProducer">Material Producer</option>
+            <option value="materialSeller">Material Seller</option>
+            <option value="serviceProvider">Service Provider</option>
+        </select>
 
-      <button type="submit">Generate 3D Model</button>
-    </form>
-    <div id="model-placeholder"></div>
-  </section>
+        <form id="partnerForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
-  <!-- Shopping Section -->
-  <section class="shopping">
-    <h2>Construction Material Shopping</h2>
-    <div class="trades">
-      <button>Gray Structure</button>
-      <button>Sewerage</button>
-      <button>Plumbing</button>
-      <button>Paint</button>
-      <button>Finishing</button>
-    </div>
-    <div class="product-table">
-      <table>
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Cement</td>
-            <td>$10</td>
-            <td><button>Add to Cart</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="services">
-    <h2>Construction Services</h2>
-    <div class="service-categories">
-      <button>Construction</button>
-      <button>Plumbing</button>
-      <button>Electrical</button>
-      <button>Painting</button>
-    </div>
-    <div class="service-details">
-      <h3>Service Name</h3>
-      <p>Description of the service.</p>
-      <button>Book Now</button>
-    </div>
-  </section>
-
-  <!-- Partner Registration -->
-  <section class="partner-registration">
-    <h2>Become a Partner</h2>
-    <form id="partner-form">
-      <label>Category</label>
-      <select>
-        <option>Material Producer</option>
-        <option>Material Seller</option>
-        <option>Service Provider</option>
-      </select>
-      <input type="text" placeholder="Full Name">
-      <input type="email" placeholder="Email">
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea placeholder="Your Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Haji Asghar Construction & Services</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
