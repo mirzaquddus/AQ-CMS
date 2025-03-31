@@ -3,84 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haji Asghar Construction</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Haji Asghar Construction & Services</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- 🔹 Navigation Bar -->
+    <nav>
+        <div class="logo">Haji Asghar CMS</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="3d-model.html">3D Model</a></li>
+            <li><a href="shopping.html">Shopping</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="partner.html">Become a Partner</a></li>
+        </ul>
+    </nav>
+
+    <!-- 🔹 Hero Section -->
     <header>
-        <h1>Haji Asghar Construction</h1>
-        <nav>
-            <ul>
-                <li><a href="#shopping">Shopping</a></li>
-                <li><a href="#model">3D Model</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#partner">Become a Partner</a></li>
-            </ul>
-        </nav>
+        <h1>Build Your Dream Home with AI</h1>
+        <p>Design 3D Houses, Buy Construction Materials & Hire Professionals</p>
+        <a href="3d-model.html" class="btn">Start 3D Designing</a>
     </header>
 
-    <section id="shopping" class="section-style">
-        <h2>Shopping</h2>
-        <p>Buy high-quality construction materials.</p>
-        <div class="card-container">
-            <div class="card">
-                <img src="cement.jpg" alt="Cement">
-                <h3>Cement</h3>
-                <p>Price: Rs. 1200 per bag</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="card">
-                <img src="steel.jpg" alt="Steel">
-                <h3>Steel</h3>
-                <p>Price: Rs. 150,000 per ton</p>
-                <button>Add to Cart</button>
-            </div>
+    <!-- 🔹 Slideshow Section -->
+    <section class="slideshow">
+        <div class="slider">
+            <img src="images/house1.jpg" alt="House Design">
+            <img src="images/house2.jpg" alt="House Design">
+            <img src="images/house3.jpg" alt="House Design">
         </div>
     </section>
 
-    <section id="model" class="section-style">
-        <h2>3D Model</h2>
-        <p>Design your dream home with our AI-based tool.</p>
-        <button onclick="generate3DModel()">Start Designing</button>
-    </section>
-
-    <section id="services" class="section-style">
-        <h2>Our Services</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="construction.jpg" alt="Construction">
-                <h3>Construction</h3>
-                <p>Complete house construction services.</p>
-                <button>Book Now</button>
-            </div>
-            <div class="card">
-                <img src="plumbing.jpg" alt="Plumbing">
-                <h3>Plumbing</h3>
-                <p>High-quality plumbing services.</p>
-                <button>Book Now</button>
-            </div>
+    <!-- 🔹 Main Sections -->
+    <section class="features">
+        <div class="feature">
+            <h2>🛠️ 3D House Design</h2>
+            <p>Use AI to generate custom 3D house models.</p>
+            <a href="3d-model.html" class="btn">Start Now</a>
+        </div>
+        <div class="feature">
+            <h2>🛒 Construction Shopping</h2>
+            <p>Buy quality construction materials at best prices.</p>
+            <a href="shopping.html" class="btn">Explore</a>
+        </div>
+        <div class="feature">
+            <h2>👷 Professional Services</h2>
+            <p>Hire expert plumbers, electricians, and more.</p>
+            <a href="services.html" class="btn">Book a Service</a>
         </div>
     </section>
 
-    <section id="partner" class="section-style">
-        <h2>Become a Partner</h2>
-        <p>Register as a material producer, seller, or service provider.</p>
-        <label for="partnerType">Choose Category:</label>
-        <select id="partnerType" onchange="showForm()">
-            <option value="">-- Select --</option>
-            <option value="materialProducer">Material Producer</option>
-            <option value="materialSeller">Material Seller</option>
-            <option value="serviceProvider">Service Provider</option>
-        </select>
-
-        <form id="partnerForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="tel" placeholder="Phone Number" required>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+    <!-- 🔹 Footer -->
+    <footer>
+        <p>Contact: +92 314 5799740 | Email: mirzaquddus00@gmail.com</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
