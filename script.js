@@ -1,23 +1,13 @@
-function showForm() {
-    let form = document.getElementById("partnerForm");
-    form.classList.remove("hidden");
-}
+document.addEventListener("DOMContentLoaded", function() {
+    let index = 0;
+    const slides = document.querySelectorAll(".slider img");
 
-function generate3DModel() {
-    alert("3D Model Generator Coming Soon!");
-}
+    function changeSlide() {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? "block" : "none";
+        });
+        index = (index + 1) % slides.length;
+    }
 
-// Shopping Cart Logic
-let cart = [];
-
-function addToCart(itemName, itemPrice) {
-    cart.push({ name: itemName, price: itemPrice });
-    localStorage.setItem("cart", JSON.stringify(cart));
-    alert(itemName + " added to cart!");
-}
-
-// Form Submission Handling
-document.getElementById("partnerForm").addEventListener("submit", function (event) {
-    event.preventDefault();
-    alert("Thank you! Your request has been submitted.");
+    setInterval(changeSlide, 3000); // Change image every 3 seconds
 });
